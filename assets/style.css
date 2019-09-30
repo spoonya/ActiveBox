@@ -179,6 +179,10 @@ p {
     background-color: #d53232;
 }
 
+.download-inner .btn--red {
+    padding: 14px 80px;
+}
+
 /*Features
 ========================*/
 
@@ -345,6 +349,7 @@ p {
 .team-text {
     font-size: 14px;
     line-height: 1.5;
+    margin-bottom: 45px;
 
     color: #6c7279;
 }
@@ -353,19 +358,19 @@ p {
 ========================*/
 
 .social {
-    display: flex;
+    display: flex;   
+}
 
-    max-width: 130px;
-
-    justify-content: space-between;
+.social--footer {
+    justify-content: center;
 }
 
 .social-item {
     display: flex;
+    margin-right: 4px;
 
     width: 40px;
     height: 40px;
-    margin-top: 45px;
     padding: 10px 10px;
 
     border: 1px solid #e8ecee;
@@ -395,6 +400,20 @@ p {
     fill: #e84545;
 }
 
+.social--footer .social-item {
+    background-color: transparent;
+    border-width: 2px;
+    border-color: #fff;
+    border-radius: 2px;
+}
+
+.social--footer .social-icon {
+    fill: #fff;
+}
+
+.social--footer .social-item:hover {
+    background-color: #fff;
+}
 
 /*Reviews
 ========================*/
@@ -455,4 +474,103 @@ p {
     text-transform: uppercase;
 
     color: #fff;
+}
+
+/*Dowload
+========================*/
+
+.download {
+    display: flex;
+
+    height: 340px;
+
+    text-align: center;
+
+    color: #53354a;
+
+    align-items: center;
+}
+
+.download-text {
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+.dowload-subtext {
+    font-size: 13px;
+    font-weight: 700;
+
+    margin-bottom: 40px;
+
+    text-transform: uppercase;
+}
+
+/*Footer
+========================*/
+
+.footer {
+
+    background-color: #3a3e64;
+}
+
+.footer-inner {
+    padding: 70px 0;
+    display: flex;
+
+    flex-wrap: wrap;
+}
+
+.footer-block {
+    width: 33.33333%;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 15px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+}
+
+.footer-adress {
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, .5);
+}
+
+.footer-text {
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, .5);
+}
+
+/*Copyright
+========================*/
+
+.copyrigth {
+    background-color: #313454;
+    padding: 20px 0;
+}
+
+.copyrigth-text {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 14px;
+    color: #808080;
+}
+
+#author {
+    color: #fff;
+}
+
+#heart {
+    color: #e84545;
 }
