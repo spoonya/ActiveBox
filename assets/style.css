@@ -54,6 +54,17 @@ p {
     height: 100px;
 }
 
+.header.fixed {
+    position: fixed;
+    background-color: #31344e;
+    height: auto;
+}
+
+.header.fixed .header-inner {
+    padding: 15px 0;
+    border-bottom: 0;
+}
+
 .header-inner {
     display: flex;
 
