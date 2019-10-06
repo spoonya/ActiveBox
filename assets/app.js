@@ -1,16 +1,56 @@
 $(function() {
+
+    /* Fixed header */
     let header = $("#header");
     let intro = $("#intro");
-    let introH  = 0;
+    let introH = intro.innerHeight();;
+    let scrollPos = $(this).scrollTop();
+    let nav = $("#nav");
+    let navToggle = $("#navToggle");
 
-    $(window).on("scroll load resize", function() {
-    	introH = intro.innerHeight();
+    checkScroll(scrollPos, introH);
+
+    $(window).on("scroll resize", function() {
+        introH = intro.innerHeight();
         scrollPos = $(this).scrollTop();
-        if (scrollPos > introH) {
+        checkScroll(scrollPos, introH);
+    });
+
+    function checkScroll(scrollPos, introH) {
+    	if (scrollPos > introH) {
             header.addClass("fixed");
-        } 
-        else {
+        } else {
             header.removeClass("fixed");
         }
+    }
+
+    /* Smooth Scroll */
+    $("[data-scroll]").on("click", function(event) {
+        event.preventDefault();
+        let elID = $(this).data('scroll');
+        let elOffset = $(elID).offset().top;
+        nav.removeClass("show");
+
+        $("html, body").animate({
+            scrollTop: elOffset - 70
+        }, 500);
     });
+
+    /* Nav Toggle */
+    navToggle.on("click", function (event) {
+    	event.preventDefault();
+    	nav.toggleClass("show");
+    });
+
+    /* Reviews: https://kenwheeler.github.io/slick/ */
+    let slider = $("#reviewsSlider");
+
+   	slider.slick({
+  		infinite: true,
+  		slidesToShow: 1,
+  		slidesToScroll: 1,
+  		fade: true,
+  		arrows: false,
+  		dots: true
+	});
 });
