@@ -95,6 +95,11 @@ p {
     color: #66697e;
 }
 
+.main-link {
+    text-decoration: none;
+    color: #fff;
+}
+
 .nav {
     font-size: 13px;
     font-weight: 700;
@@ -549,8 +554,8 @@ p {
     
     cursor: pointer;
 
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     padding: 0;
 
     opacity: .3;
@@ -802,9 +807,6 @@ p {
         width: 100%;
         padding-bottom: 40px;
         padding-left: 0;
-    }
-
-    .reviews-img {
     }
 }
 
